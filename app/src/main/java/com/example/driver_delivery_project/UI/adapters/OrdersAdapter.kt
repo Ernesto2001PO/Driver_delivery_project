@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.driver_delivery_project.R
 import com.example.driver_delivery_project.UI.activities.MapsActivity
 import com.example.driver_delivery_project.models.Order_Driver.OrderFree
-import com.example.driver_delivery_project.models.Order_Driver.OrdersFree
 
 class OrdersAdapter(
     private var orders: MutableList<OrderFree>,
@@ -70,7 +69,7 @@ class OrdersAdapter(
 
                         notifyItemRemoved(position)
 
-                        notifyItemInserted(orders.size + ordersDenied.size - 1) // -1 porque el índice empieza en 0
+                        notifyItemInserted(orders.size + ordersDenied.size - 1)
 
                         Log.d("OrdersAdapter", "Orden movida a denegada: ${removedOrder.address}")
                     }
